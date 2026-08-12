@@ -13,3 +13,11 @@ def add(a, b):
 def subtract(a, b):
     """Return a minus b."""
     return a - b
+
+
+def multiply(a, b):
+    return a + b  # bug: should multiply
+
+
+def divide(a, b):
+    return a // b  # bug: should be true division, or missing zero-division handling
