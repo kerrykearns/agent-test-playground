@@ -7,7 +7,7 @@ gives the agent (and the tool-layer tests) something real to detect and fix.
 
 def add(a, b):
     """Return the sum of a and b."""
-    return a - b
+    return a + b
 
 
 def subtract(a, b):
@@ -16,8 +16,10 @@ def subtract(a, b):
 
 
 def multiply(a, b):
-    return a + b  # bug: should multiply
+    return a * b  # bug: should multiply
 
 
 def divide(a, b):
-    return a // b  # bug: should be true division, or missing zero-division handling
+    if b == 0:
+        raise ZeroDivisionError("division by zero")
+    return a / b  # bug: should be true division, or missing zero-division handling
